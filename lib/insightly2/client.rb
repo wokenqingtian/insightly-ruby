@@ -11,7 +11,8 @@ module Insightly2
     include DSL
     include Errors
 
-    URL = 'https://api.insight.ly/v2.1/'
+    # URL = 'https://api.insight.ly/v2.1/'
+    URL = 'https://api.insight.ly/v2.2/'
     REQUESTS = [:get, :post, :put, :delete]
     HEADERS = {'Accept' => 'application/json', 'Content-Type' => 'application/json'}
     LOGGER = Logger.new(STDOUT)
@@ -47,6 +48,7 @@ module Insightly2
       LOGGER.info(logger_info_message)
 
       payload = !query.empty? ? JSON.generate(query) : ''
+      binding.pry
       response = @connection.run_request(method, "#{URL}#{path}", payload, headers)
 
       case response.status.to_i
