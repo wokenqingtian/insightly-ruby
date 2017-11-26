@@ -48,7 +48,6 @@ module Insightly2
       LOGGER.info(logger_info_message)
 
       payload = !query.empty? ? JSON.generate(query) : ''
-      binding.pry
       response = @connection.run_request(method, "#{URL}#{path}", payload, headers)
 
       case response.status.to_i
