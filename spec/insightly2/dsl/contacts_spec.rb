@@ -174,6 +174,15 @@ describe Insightly2::DSL::Contacts do
     end
   end
 
+  # DELETE /v2.2/Contacts/{c_id}/Tags/{tagName}
+  describe '#delete_contact_tag' do
+    it 'returns a response with code 202' do
+      VCR.use_cassette('delete_contact_tag') do
+        response = Insightly2.client.delete_contact_tag(contact_id: contact_id, tag_name: 'GoodMan')
+      end
+    end
+  end
+
   # DELETE /v2.1/Contacts/{c_id}/Image
   describe '#delete_contact_image' do
     it 'returns a response with code 202' do

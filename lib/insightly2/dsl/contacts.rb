@@ -158,6 +158,11 @@ module Insightly2
       request(:delete, "Contacts/#{id}")
     end
 
+    def delete_contact_tag(contact_id: nil, tag_name: nil)
+      raise ArgumentError, "Contact id connot be blank" if contact_id.blank?
+      request(:delete, "Contacts/#{contact_id}/tags/#{tag_name}")
+    end
+
     # DELETE /v2.1/Contacts/{c_id}/Image
     # Deletes a contact's image.
     # @param [String, Fixnum] id The ID of the contact with the image to delete.
