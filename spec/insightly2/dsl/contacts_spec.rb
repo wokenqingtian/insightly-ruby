@@ -124,6 +124,16 @@ describe Insightly2::DSL::Contacts do
     end
   end
 
+  # PUT /v2.2/Contacts/{c_id}/Links
+  describe '#update_contact_link' do
+    it 'updates and return contact link' do
+      VCR.use_cassette('update_contact_link') do
+        contact = Insightly2.client.get_contact(id: contact_id)
+        expect(Insightly2.client.update_contact_link(contact_id: contact_id, link: contact.links.first)).to be_a(Contact)
+      end
+    end
+  end
+
   # PUT /v2.1/Contacts/{c_id}/Image/{filename}
   # describe '#update_contact_image' do
   #   it 'returns a response with code 201' do

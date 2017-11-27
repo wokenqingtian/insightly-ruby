@@ -112,6 +112,14 @@ module Insightly2
       Resources::Contact.parse(request(:put, "Contacts/#{contact_id}/Addresses", address))
     end
 
+    # PUT /v2.2/Contacts/{c_id}/Links
+    # Updates a contact's link
+    def update_contact_link(contact_id: nil, link: nil)
+      raise ArgumentError, "Contact id cannot be blank" if contact_id.blank?
+      raise ArgumentError, "Contact link cannot be blank" if link.blank?
+      Resources::Contact.parse(request(:put, "Contacts/#{contact_id}/Links", link))
+    end
+
     # PUT /v2.1/Contacts/{c_id}/Image/{filename}
     # Updates a contact's image.
     # @param [String, Fixnum] id The ID of the contact.
