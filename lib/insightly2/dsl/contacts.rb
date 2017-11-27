@@ -73,6 +73,14 @@ module Insightly2
       Resources::Contact.parse(request(:post, "Contacts", contact))
     end
 
+    # POST /v2.2/Contacts/{c_id}/Tags
+    # Creates a contact.
+    def create_contact_tag(contact_id: nil, tag: nil)
+      raise ArgumentError, "Contact contact_id cannot be blank" if contact_id.blank?
+      raise ArgumentError, "Contact tag cannot be blank" if tag.blank?
+      Resources::Contact.parse(request(:post, "Contacts/#{contact_id}/Tags", tag))
+    end
+
     # POST /v2.1/Contacts/{c_id}/Image/{filename}
     # Adds a contact's image.
     # @param [String, Fixnum] id The ID of the contact.

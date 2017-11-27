@@ -76,6 +76,15 @@ describe Insightly2::DSL::Contacts do
     end
   end
 
+  # Post /2.2/Contacts/{c_id}/Tags
+  describe '#create_a_contact_tag' do
+    it 'creates and return a contact tag' do
+      VCR.use_cassette('create_contact_tag') do
+        expect(Insightly2.client.create_contact_tag(contact_id: contact_id, tag: {"TAG_NAME" => 'GoodMan'})).to be_a(Contact)
+      end
+    end
+  end
+
   # POST /v2.1/Contacts/{c_id}/Image/{filename}
   # describe '#create_contact_image' do
   #   it 'returns a response with code 201' do
