@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Contacts/243779461
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Mon, 27 Nov 2017 06:47:15 GMT
+      Content-Length:
+      - '902'
+      Set-Cookie:
+      - snaptid=sac1prdc01wut01; path=/; HttpOnly; Secure
+    body:
+      encoding: ASCII-8BIT
+      string: '{"CONTACT_ID":243779461,"SALUTATION":null,"FIRST_NAME":null,"LAST_NAME":"akk","BACKGROUND":null,"IMAGE_URL":null,"DEFAULT_LINKED_ORGANISATION":117313127,"OWNER_USER_ID":1511846,"DATE_CREATED_UTC":"2017-11-27
+        01:45:41","DATE_UPDATED_UTC":"2017-11-27 06:47:02","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[{"CUSTOM_FIELD_ID":"CONTACT_FIELD_1","FIELD_VALUE":"123"}],"ADDRESSES":[{"ADDRESS_ID":10243779461,"ADDRESS_TYPE":"POSTAL","STREET":"Akkk","CITY":"cheng","STATE":"du","POSTCODE":"11","COUNTRY":"Albania"}],"CONTACTINFOS":[{"CONTACT_INFO_ID":40243779461,"TYPE":"PHONE","SUBTYPE":null,"LABEL":"WORK","DETAIL":"abcdefg"},{"CONTACT_INFO_ID":60243779461,"TYPE":"PHONE","SUBTYPE":null,"LABEL":"HOME","DETAIL":"222222"},{"CONTACT_INFO_ID":70243779461,"TYPE":"PHONE","SUBTYPE":null,"LABEL":"MOBILE","DETAIL":"333333"},{"CONTACT_INFO_ID":100243779461,"TYPE":"EMAIL","SUBTYPE":null,"LABEL":"WORK","DETAIL":"xxx@qq.com"}],"DATES":[],"TAGS":[{"TAG_NAME":"cool"},{"TAG_NAME":"nice"}],"LINKS":[{"LINK_ID":167974950,"CONTACT_ID":243779461,"OPPORTUNITY_ID":null,"ORGANISATION_ID":117313127,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":"CEO","DETAILS":null}],"CONTACTLINKS":[{"CONTACT_LINK_ID":23272356,"FIRST_CONTACT_ID":243779461,"SECOND_CONTACT_ID":243581683,"RELATIONSHIP_ID":1,"DETAILS":"their
+        relationship key is a car."}],"CAN_EDIT":true,"CAN_DELETE":true,"SOCIAL_LINKEDIN":null,"SOCIAL_FACEBOOK":null,"SOCIAL_TWITTER":null,"ASSISTANT_NAME":null}'
+    http_version: 
+  recorded_at: Mon, 27 Nov 2017 06:46:47 GMT
+- request:
+    method: put
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Contacts/243779461/CustomFields
+    body:
+      encoding: UTF-8
+      string: '{"custom_field_id":"CONTACT_FIELD_1","field_value":"123"}'
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Mon, 27 Nov 2017 06:47:16 GMT
+      Content-Length:
+      - '173'
+      Set-Cookie:
+      - snaptid=sac1prdc01wut01; path=/; HttpOnly; Secure
+    body:
+      encoding: ASCII-8BIT
+      string: '{"CUSTOM_FIELD_ID":"CONTACT_FIELD_1","FIELD_VALUE":"123"}'
+    http_version: 
+  recorded_at: Mon, 27 Nov 2017 06:46:48 GMT
+recorded_with: VCR 3.0.3

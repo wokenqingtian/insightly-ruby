@@ -120,6 +120,14 @@ module Insightly2
       Resources::Contact.parse(request(:put, "Contacts/#{contact_id}/Links", link))
     end
 
+    # PUT /v2.2/Contacts/{c_id}/CustomFields
+    # Updates a contact's custom field
+    def update_contact_custom_field(contact_id: nil, custom_field: nil)
+      raise ArgumentError, "Contact id cannot be blank" if contact_id.blank?
+      raise ArgumentError, "Contact custom field cannot be blank" if custom_field.blank?
+      Resources::Contact.parse(request(:put, "Contacts/#{contact_id}/CustomFields", custom_field))
+    end
+
     # PUT /v2.1/Contacts/{c_id}/Image/{filename}
     # Updates a contact's image.
     # @param [String, Fixnum] id The ID of the contact.
