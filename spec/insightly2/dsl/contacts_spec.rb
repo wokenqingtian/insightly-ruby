@@ -87,7 +87,7 @@ describe Insightly2::DSL::Contacts do
   #   end
   # end
 
-  # PUT /v2.1/Contacts
+  # PUT /v2.2/Contacts
   describe '#update_contact' do
     it 'updates and returns contact' do
       VCR.use_cassette('update_contact') do
@@ -100,6 +100,16 @@ describe Insightly2::DSL::Contacts do
       VCR.use_cassette('update_contact_partial') do
         contact = Insightly2.client.get_contact(id: contact_id)
         expect(Insightly2.client.update_contact(contact: contact, partial: true)).to be_a(Contact)
+      end
+    end
+  end
+
+  # PUT /v2.2/Contacts/{id}/ContactsInfos
+  describe '#upate_contact_info' do
+    it 'updates and return contact info' do
+      VCR.use_cassette('update_contact_info') do
+        contact = Insightly2.client.get_contact(id: contact_id)
+        expect(Insightly2.client.update_contact_info(contact_id: contact_id, info: contact.contactinfos.first )).to be_a(Contact)
       end
     end
   end
