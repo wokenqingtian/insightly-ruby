@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: post
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Contacts
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Contacts
     body:
       encoding: UTF-8
       string: '{"first_name":"Shark","last_name":"Nado"}'
     headers:
       User-Agent:
-      - Faraday v0.9.0
+      - Faraday v0.13.1
       Accept:
       - application/json
       Content-Type:
@@ -28,20 +28,16 @@ http_interactions:
       - application/json; charset=utf-8
       Expires:
       - "-1"
-      Location:
-      - https://api.insight.ly/v2.1/Contacts/80192679
-      Server:
-      - Microsoft-IIS/7.5
       Date:
-      - Sat, 04 Oct 2014 18:24:31 GMT
+      - Mon, 27 Nov 2017 05:41:38 GMT
       Content-Length:
-      - '470'
+      - '558'
       Set-Cookie:
-      - snaptid=sac1prdc01ut04; path=/
+      - snaptid=sac1prdc01wut01; path=/; HttpOnly; Secure
     body:
       encoding: UTF-8
-      string: '{"CONTACT_ID":80192679,"SALUTATION":null,"FIRST_NAME":"Shark","LAST_NAME":"Nado","BACKGROUND":null,"IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","DEFAULT_LINKED_ORGANISATION":null,"DATE_CREATED_UTC":"2014-10-04
-        18:24:32","DATE_UPDATED_UTC":"2014-10-04 18:24:32","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"ADDRESSES":[],"CONTACTINFOS":[],"DATES":[],"TAGS":[],"LINKS":[],"CONTACTLINKS":[],"EMAILLINKS":[]}'
+      string: '{"CONTACT_ID":243787358,"SALUTATION":null,"FIRST_NAME":"Shark","LAST_NAME":"Nado","BACKGROUND":null,"IMAGE_URL":null,"DEFAULT_LINKED_ORGANISATION":null,"OWNER_USER_ID":1511846,"DATE_CREATED_UTC":"2017-11-27
+        05:41:39","DATE_UPDATED_UTC":"2017-11-27 05:41:39","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"ADDRESSES":null,"CONTACTINFOS":null,"DATES":[],"TAGS":[],"LINKS":[],"CONTACTLINKS":[],"CAN_EDIT":true,"CAN_DELETE":true,"SOCIAL_LINKEDIN":null,"SOCIAL_FACEBOOK":null,"SOCIAL_TWITTER":null,"ASSISTANT_NAME":null}'
     http_version: 
-  recorded_at: Sat, 04 Oct 2014 18:24:25 GMT
-recorded_with: VCR 2.9.0
+  recorded_at: Mon, 27 Nov 2017 05:41:10 GMT
+recorded_with: VCR 3.0.3
