@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly2::DSL::Organisations do
-  let(:organisation_id) { 39831139 }
+  let(:organisation_id) { 117309796 }
 
   # GET /v2.1/Organisations/{id}
   describe '#get_organisation' do
