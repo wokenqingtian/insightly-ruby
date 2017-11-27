@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/CustomFields
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/CustomFields
     body:
       encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.9.0
+      - Faraday v0.13.1
       Accept:
       - application/json
       Content-Type:
@@ -30,17 +30,16 @@ http_interactions:
       - "-1"
       Vary:
       - Accept-Encoding
-      Server:
-      - Microsoft-IIS/7.5
       Date:
-      - Sat, 04 Oct 2014 22:15:19 GMT
+      - Mon, 27 Nov 2017 09:06:01 GMT
       Content-Length:
-      - '292'
+      - '332'
       Set-Cookie:
-      - snaptid=sac1prdc01ut04; path=/
+      - snaptid=sac1prdc01wut02; path=/; HttpOnly; Secure
     body:
-      encoding: UTF-8
-      string: '[{"CUSTOM_FIELD_ID":"CONTACT_FIELD_1","ORDER_ID":1,"FIELD_FOR":"CONTACT","FIELD_NAME":"Boomerang","FIELD_TYPE":"TEXT","FIELD_HELP_TEXT":null,"DEFAULT_VALUE":null,"GROUP_ID":null,"CUSTOM_FIELD_OPTIONS":[]},{"CUSTOM_FIELD_ID":"CONTACT_FIELD_2","ORDER_ID":2,"FIELD_FOR":"CONTACT","FIELD_NAME":"Fandango","FIELD_TYPE":"TEXT","FIELD_HELP_TEXT":null,"DEFAULT_VALUE":null,"GROUP_ID":null,"CUSTOM_FIELD_OPTIONS":[]}]'
+      encoding: ASCII-8BIT
+      string: '[{"CUSTOM_FIELD_ID":"CONTACT_FIELD_1","ORDER_ID":1,"FIELD_FOR":"CONTACT","FIELD_NAME":"fap_user_id","FIELD_TYPE":"TEXT","FIELD_HELP_TEXT":null,"DEFAULT_VALUE":"0","GROUP_ID":4287248,"EDITABLE":true,"VISIBLE":true,"CUSTOM_FIELD_OPTIONS":[]},{"CUSTOM_FIELD_ID":"CONTACT_FIELD_2","ORDER_ID":2,"FIELD_FOR":"CONTACT","FIELD_NAME":"ttt_user_id","FIELD_TYPE":"TEXT","FIELD_HELP_TEXT":"cool
+        text","DEFAULT_VALUE":"0","GROUP_ID":4287248,"EDITABLE":true,"VISIBLE":true,"CUSTOM_FIELD_OPTIONS":[]}]'
     http_version: 
-  recorded_at: Sat, 04 Oct 2014 22:15:12 GMT
-recorded_with: VCR 2.9.0
+  recorded_at: Mon, 27 Nov 2017 09:05:32 GMT
+recorded_with: VCR 3.0.3
