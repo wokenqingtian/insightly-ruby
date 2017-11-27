@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly2::DSL::Events do
-  let(:event_id) { 7228197 }
+  let(:event_id) { 7228029 }
 
   # GET /v2.2/Events/{id}
   describe '#get_event' do
