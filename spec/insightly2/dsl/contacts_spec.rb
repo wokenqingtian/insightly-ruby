@@ -57,12 +57,22 @@ describe Insightly2::DSL::Contacts do
   # end
 
   # GET /v2.1/Contacts?ids={ids}&email={email}&tag={tag}
+  # GET /v2.2/Contacts/Search
   describe '#get_contacts' do
     it 'returns an array of contacts' do
       VCR.use_cassette('get_contacts') do
         contacts = Insightly2.client.get_contacts
         expect(contacts).to be_a(Array)
         expect(contacts.first).to be_a(Contact)
+      end
+    end
+
+    it 'returns an array which contains Chris Chen' do
+      VCR.use_cassette('search_specific_contacts') do
+        contacts = Insightly2.client.get_contacts(query: {brief: false, top: 10, skip: 0, count_total: false, last_name: 'Chen'})
+        expect(contacts).to be_a(Array)
+        expect(contacts.first).to be_a(Contact)
+        expect(contacts.first.last_name).to eql('Chen')
       end
     end
   end

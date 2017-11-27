@@ -52,14 +52,10 @@ module Insightly2
       Resources::Task.parse(request(:get, "Contacts/#{id}/Tasks"))
     end
 
-    # GET /v2.1/Contacts?ids={ids}&email={email}&tag={tag}
-    # Get a list of contacts.
-    # @param [Array] ids The contact ids of the contacts to return (optional).
-    # @param [String] email The email address of the contact to return (optional).
-    # @param [String] tag The tag that has been applied to contacts (optional).
-    # @return [Array, nil].
-    def get_contacts(ids: [], email: '', tag: '', query_params: {})
-      url = Utils::UrlHelper.build_url(path: "Contacts", params: {ids: ids.join(','), email: email, tag: tag}.merge(query_params))
+    # GET /v2.2/Contacts/Search
+    # Get or Search a list of contacts.
+    def get_contacts(query: {})
+      url = Utils::UrlHelper.build_url(path: "Contacts/Search", params: query) 
       Resources::Contact.parse(request(:get, url))
     end
 
