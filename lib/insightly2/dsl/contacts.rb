@@ -85,14 +85,15 @@ module Insightly2
       request(:post, "Contacts/#{id}/Image/#{filename}")
     end
 
-    # PUT /v2.1/Contacts
+    # PUT /v2.2/Contacts
     # Updates a contact.
     # @param [Hash] contact The contact to update.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Contact, nil].
-    def update_contact(contact: nil)
+    def update_contact(contact: nil, partial: false)
       raise ArgumentError, "Contact cannot be blank" if contact.blank?
-      Resources::Contact.parse(request(:put, "Contacts", contact))
+      url = Utils::UrlHelper.build_url(path: "Contacts", params: { brief: partial })
+      Resources::Contact.parse(request(:put, url, contact))
     end
 
     # PUT /v2.1/Contacts/{c_id}/Image/{filename}

@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe Insightly2::DSL::Contacts do
-  let(:contact_id) { 70653019 }
+  let(:contact_id) { 243779461 }
 
-  # GET /v2.1/Contacts/{id}
+  # GET /v2.2/Contacts/{id}
   describe '#get_contact' do
     it 'returns a contact' do
       VCR.use_cassette('get_contact') do
@@ -93,6 +93,13 @@ describe Insightly2::DSL::Contacts do
       VCR.use_cassette('update_contact') do
         contact = Insightly2.client.get_contact(id: contact_id)
         expect(Insightly2.client.update_contact(contact: contact)).to be_a(Contact)
+      end
+    end
+
+    it 'partial updates and returns contact' do
+      VCR.use_cassette('update_contact_partial') do
+        contact = Insightly2.client.get_contact(id: contact_id)
+        expect(Insightly2.client.update_contact(contact: contact, partial: true)).to be_a(Contact)
       end
     end
   end
