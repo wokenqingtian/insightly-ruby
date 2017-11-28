@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::Resources::Organisation do
   subject(:organisation) do
     VCR.use_cassette('get_organisation') do
-      Insightly2.client.get_organisation(id: 39831139)
+      Insightly2.client.get_organisation(id: 117309796)
     end
   end
 
@@ -14,7 +14,8 @@ describe Insightly2::Resources::Organisation do
 
     %w(organisation_id organisation_name background image_url owner_user_id date_created_utc
        date_updated_utc visible_to visible_team_id visible_user_ids customfields addresses
-       contactinfos dates tags links organisationlinks emaillinks).each do |method|
+       contactinfos dates tags links organisationlinks can_edit can_delete social_linkedin
+       social_facebook social_twitter).each do |method|
       it "responds to #{method}" do
         expect(subject).to respond_to(method)
       end
