@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::Resources::Event do
   subject(:event) do
     VCR.use_cassette('get_event') do
-      Insightly2.client.get_event(id: 2402366)
+      Insightly2.client.get_event(id: 7228029)
     end
   end
 
