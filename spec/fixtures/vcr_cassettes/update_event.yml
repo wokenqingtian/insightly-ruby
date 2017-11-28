@@ -2,101 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Events/2402366
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.9.0
-      Accept:
-      - application/json
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache
-      Pragma:
-      - no-cache
-      Content-Type:
-      - application/json; charset=utf-8
-      Expires:
-      - "-1"
-      Vary:
-      - Accept-Encoding
-      Server:
-      - Microsoft-IIS/7.5
-      Date:
-      - Sat, 04 Oct 2014 22:45:18 GMT
-      Content-Length:
-      - '446'
-      Set-Cookie:
-      - snaptid=sac1prdc01ut04; path=/
-    body:
-      encoding: UTF-8
-      string: '{"EVENT_ID":2402366,"TITLE":"A tornado of sharks","LOCATION":null,"DETAILS":null,"START_DATE_UTC":"2014-10-04
-        23:00:00","END_DATE_UTC":"2014-10-05 00:00:00","ALL_DAY":false,"PUBLICLY_VISIBLE":true,"REMINDER_DATE_UTC":null,"REMINDER_SENT":false,"EVENTLINKS":[{"EVENT_LINK_ID":755567,"EVENT_ID":2402366,"CONTACT_ID":80192679,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":null}],"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-04
-        22:36:09","DATE_UPDATED_UTC":"2014-10-04 22:36:09"}'
-    http_version: 
-  recorded_at: Sat, 04 Oct 2014 22:45:11 GMT
-- request:
-    method: put
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Events
-    body:
-      encoding: UTF-8
-      string: '{"EVENT_ID":2402366,"TITLE":"A tornado of sharks","LOCATION":null,"DETAILS":null,"START_DATE_UTC":"2014-10-04
-        23:00:00","END_DATE_UTC":"2014-10-05 00:00:00","ALL_DAY":false,"PUBLICLY_VISIBLE":true,"REMINDER_DATE_UTC":null,"REMINDER_SENT":false,"EVENTLINKS":[{"EVENT_LINK_ID":755567,"EVENT_ID":2402366,"CONTACT_ID":80192679,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":null}],"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-04
-        22:36:09","DATE_UPDATED_UTC":"2014-10-04 22:36:09"}'
-    headers:
-      User-Agent:
-      - Faraday v0.9.0
-      Accept:
-      - application/json
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache
-      Pragma:
-      - no-cache
-      Content-Type:
-      - application/json; charset=utf-8
-      Expires:
-      - "-1"
-      Location:
-      - https://api.insight.ly/v2.1/Events/2402366
-      Vary:
-      - Accept-Encoding
-      Server:
-      - Microsoft-IIS/7.5
-      Date:
-      - Sat, 04 Oct 2014 22:45:18 GMT
-      Content-Length:
-      - '452'
-      Set-Cookie:
-      - snaptid=sac1prdc01ut05; path=/
-    body:
-      encoding: UTF-8
-      string: '{"EVENT_ID":2402366,"TITLE":"A tornado of sharks","LOCATION":null,"DETAILS":null,"START_DATE_UTC":"2014-10-04
-        23:00:00","END_DATE_UTC":"2014-10-05 00:00:00","ALL_DAY":false,"PUBLICLY_VISIBLE":true,"REMINDER_DATE_UTC":null,"REMINDER_SENT":false,"EVENTLINKS":[{"EVENT_LINK_ID":755567,"EVENT_ID":2402366,"CONTACT_ID":80192679,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":null}],"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-04
-        22:36:09","DATE_UPDATED_UTC":"2014-10-04 22:45:19"}'
-    http_version: 
-  recorded_at: Sat, 04 Oct 2014 22:45:11 GMT
-- request:
-    method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Events/7228197
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Events/7228029
     body:
       encoding: UTF-8
       string: ''
@@ -125,26 +31,26 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Fri, 24 Nov 2017 09:41:33 GMT
+      - Tue, 28 Nov 2017 02:29:01 GMT
       Content-Length:
-      - '474'
+      - '466'
       Set-Cookie:
       - snaptid=sac1prdc01wut03; path=/; HttpOnly; Secure
     body:
       encoding: ASCII-8BIT
-      string: '{"EVENT_ID":7228197,"TITLE":"signup","LOCATION":"dddd","DETAILS":null,"START_DATE_UTC":"2017-11-19
-        01:00:00","END_DATE_UTC":"2017-11-20 02:00:00","ALL_DAY":false,"PUBLICLY_VISIBLE":true,"REMINDER_DATE_UTC":null,"REMINDER_SENT":false,"EVENTLINKS":[{"EVENT_LINK_ID":6821713,"EVENT_ID":7228197,"CONTACT_ID":243581675,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":null,"LEAD_ID":null}],"OWNER_USER_ID":1511846,"DATE_CREATED_UTC":"2017-11-24
-        00:22:22","DATE_UPDATED_UTC":"2017-11-24 00:23:15","CAN_EDIT":true,"CAN_DELETE":true}'
+      string: '{"EVENT_ID":7228029,"TITLE":"login","LOCATION":"China ","DETAILS":"Kuku
+        ","START_DATE_UTC":"2017-11-24 00:00:00","END_DATE_UTC":"2017-11-25 00:00:00","ALL_DAY":true,"PUBLICLY_VISIBLE":false,"REMINDER_DATE_UTC":null,"REMINDER_SENT":false,"EVENTLINKS":[{"EVENT_LINK_ID":6821461,"EVENT_ID":7228029,"CONTACT_ID":243581671,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":null,"LEAD_ID":null}],"OWNER_USER_ID":1511846,"DATE_CREATED_UTC":"2017-11-23
+        23:05:20","DATE_UPDATED_UTC":"2017-11-23 23:05:20","CAN_EDIT":true,"CAN_DELETE":true}'
     http_version: 
-  recorded_at: Fri, 24 Nov 2017 09:41:05 GMT
+  recorded_at: Tue, 28 Nov 2017 02:28:32 GMT
 - request:
     method: put
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Events
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Events?brief=false
     body:
       encoding: UTF-8
-      string: '{"EVENT_ID":7228197,"TITLE":"signup","LOCATION":"dddd","DETAILS":null,"START_DATE_UTC":"2017-11-19
-        01:00:00","END_DATE_UTC":"2017-11-20 02:00:00","ALL_DAY":false,"PUBLICLY_VISIBLE":true,"REMINDER_DATE_UTC":null,"REMINDER_SENT":false,"EVENTLINKS":[{"EVENT_LINK_ID":6821713,"EVENT_ID":7228197,"CONTACT_ID":243581675,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":null,"LEAD_ID":null}],"OWNER_USER_ID":1511846,"DATE_CREATED_UTC":"2017-11-24
-        00:22:22","DATE_UPDATED_UTC":"2017-11-24 00:23:15","CAN_EDIT":true,"CAN_DELETE":true}'
+      string: '{"EVENT_ID":7228029,"TITLE":"login","LOCATION":"China ","DETAILS":"Kuku
+        ","START_DATE_UTC":"2017-11-24 00:00:00","END_DATE_UTC":"2017-11-25 00:00:00","ALL_DAY":true,"PUBLICLY_VISIBLE":false,"REMINDER_DATE_UTC":null,"REMINDER_SENT":false,"EVENTLINKS":[{"EVENT_LINK_ID":6821461,"EVENT_ID":7228029,"CONTACT_ID":243581671,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":null,"LEAD_ID":null}],"OWNER_USER_ID":1511846,"DATE_CREATED_UTC":"2017-11-23
+        23:05:20","DATE_UPDATED_UTC":"2017-11-23 23:05:20","CAN_EDIT":true,"CAN_DELETE":true}'
     headers:
       User-Agent:
       - Faraday v0.13.1
@@ -170,16 +76,16 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Fri, 24 Nov 2017 09:41:34 GMT
+      - Tue, 28 Nov 2017 02:29:02 GMT
       Content-Length:
-      - '479'
+      - '478'
       Set-Cookie:
-      - snaptid=sac1prdc01wut02; path=/; HttpOnly; Secure
+      - snaptid=sac1prdc01wut03; path=/; HttpOnly; Secure
     body:
       encoding: ASCII-8BIT
-      string: '{"EVENT_ID":7228197,"TITLE":"signup","LOCATION":"dddd","DETAILS":null,"START_DATE_UTC":"2017-11-19
-        01:00:00","END_DATE_UTC":"2017-11-20 02:00:00","ALL_DAY":false,"PUBLICLY_VISIBLE":true,"REMINDER_DATE_UTC":null,"REMINDER_SENT":false,"EVENTLINKS":[{"EVENT_LINK_ID":6821713,"EVENT_ID":7228197,"CONTACT_ID":243581675,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":null,"LEAD_ID":null}],"OWNER_USER_ID":1511846,"DATE_CREATED_UTC":"2017-11-24
-        00:22:22","DATE_UPDATED_UTC":"2017-11-24 09:41:34","CAN_EDIT":true,"CAN_DELETE":true}'
+      string: '{"EVENT_ID":7228029,"TITLE":"login","LOCATION":"China ","DETAILS":"Kuku
+        ","START_DATE_UTC":"2017-11-24 00:00:00","END_DATE_UTC":"2017-11-25 00:00:00","ALL_DAY":true,"PUBLICLY_VISIBLE":false,"REMINDER_DATE_UTC":null,"REMINDER_SENT":false,"EVENTLINKS":[{"EVENT_LINK_ID":6821461,"EVENT_ID":7228029,"CONTACT_ID":243581671,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":null,"LEAD_ID":null}],"OWNER_USER_ID":1511846,"DATE_CREATED_UTC":"2017-11-23
+        23:05:20","DATE_UPDATED_UTC":"2017-11-28 02:29:03","CAN_EDIT":true,"CAN_DELETE":true}'
     http_version: 
-  recorded_at: Fri, 24 Nov 2017 09:41:07 GMT
+  recorded_at: Tue, 28 Nov 2017 02:28:33 GMT
 recorded_with: VCR 3.0.3

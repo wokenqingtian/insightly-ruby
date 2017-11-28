@@ -38,7 +38,7 @@ describe Insightly2::DSL::Events do
     it 'updates and returns event' do
       VCR.use_cassette('update_event') do
         event = Insightly2.client.get_event(id: event_id)
-        expect(Insightly2.client.update_event(event: event)).to be_a(Event)
+        expect(Insightly2.client.update_event(event: event, brief: false)).to be_a(Event)
       end
     end
   end
