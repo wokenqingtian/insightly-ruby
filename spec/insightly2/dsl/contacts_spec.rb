@@ -118,7 +118,7 @@ describe Insightly2::DSL::Contacts do
     it 'partial updates and returns contact' do
       VCR.use_cassette('update_contact_partial') do
         contact = Insightly2.client.get_contact(id: contact_id)
-        expect(Insightly2.client.update_contact(contact: contact, partial: true)).to be_a(Contact)
+        expect(Insightly2.client.update_contact(contact: contact, brief: true)).to be_a(Contact)
       end
     end
   end
