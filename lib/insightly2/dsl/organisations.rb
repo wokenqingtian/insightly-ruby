@@ -51,13 +51,9 @@ module Insightly2
       Resources::Task.parse(request(:get, "Organisations/#{id}/Tasks"))
     end
 
-    # GET /v2.1/Organisations?ids={ids}&domain={domain}&tag={tag}
-    # @param [Array] ids The organisation's IDs (optional).
-    # @param [String] domain The email domain (optional).
-    # @param [String] tag The tag an organisation has been tagged with (optional).
-    # @return [Array, nil].
-    def get_organisations(ids: [], domain: '', tag: '', query_params: {})
-      url = Utils::UrlHelper.build_url(path: "Organisations", params: {ids: ids.join(','), domain: domain, tag: tag}.merge(query_params))
+    # GET /v2.2/Organisations/Search
+    def get_organisations(query={})
+      url = Utils::UrlHelper.build_url(path: "Organisations", params: query)
       Resources::Organisation.parse(request(:get, url))
     end
 
