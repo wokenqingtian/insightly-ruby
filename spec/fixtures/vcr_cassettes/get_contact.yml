@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Contacts/70653019
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Contacts/243779461
     body:
       encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.9.0
+      - Faraday v0.13.1
       Accept:
       - application/json
       Content-Type:
@@ -30,18 +30,17 @@ http_interactions:
       - "-1"
       Vary:
       - Accept-Encoding
-      Server:
-      - Microsoft-IIS/7.5
       Date:
-      - Sat, 04 Oct 2014 17:38:29 GMT
+      - Tue, 28 Nov 2017 02:36:45 GMT
       Content-Length:
-      - '709'
+      - '918'
       Set-Cookie:
-      - snaptid=sac1prdc01ut04; path=/
+      - snaptid=sac1prdc01wut02; path=/; HttpOnly; Secure
     body:
-      encoding: UTF-8
-      string: '{"CONTACT_ID":70653019,"SALUTATION":null,"FIRST_NAME":"John","LAST_NAME":"Smith","BACKGROUND":null,"IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","DEFAULT_LINKED_ORGANISATION":35343491,"DATE_CREATED_UTC":"2014-07-31
-        16:41:51","DATE_UPDATED_UTC":"2014-10-04 17:37:41","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"ADDRESSES":[],"CONTACTINFOS":[{"CONTACT_INFO_ID":130210198,"TYPE":"EMAIL","SUBTYPE":null,"LABEL":"WORK","DETAIL":"test-researcher123123@test.com"},{"CONTACT_INFO_ID":145027804,"TYPE":"PHONE","SUBTYPE":null,"LABEL":"WORK","DETAIL":"12345678"}],"DATES":[],"TAGS":[{"TAG_NAME":"Requester"}],"LINKS":[{"LINK_ID":45984180,"CONTACT_ID":70653019,"OPPORTUNITY_ID":null,"ORGANISATION_ID":35343491,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984227,"CONTACT_ID":70653019,"OPPORTUNITY_ID":4070119,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null}],"CONTACTLINKS":[],"EMAILLINKS":[]}'
+      encoding: ASCII-8BIT
+      string: '{"CONTACT_ID":243779461,"SALUTATION":null,"FIRST_NAME":null,"LAST_NAME":"akk","BACKGROUND":null,"IMAGE_URL":null,"DEFAULT_LINKED_ORGANISATION":117313127,"OWNER_USER_ID":1511846,"DATE_CREATED_UTC":"2017-11-27
+        01:45:41","DATE_UPDATED_UTC":"2017-11-27 06:47:02","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[{"CUSTOM_FIELD_ID":"CONTACT_FIELD_1","FIELD_VALUE":"123"}],"ADDRESSES":[{"ADDRESS_ID":10243779461,"ADDRESS_TYPE":"POSTAL","STREET":"Akkk","CITY":"cheng","STATE":"du","POSTCODE":"11","COUNTRY":"Albania"}],"CONTACTINFOS":[{"CONTACT_INFO_ID":40243779461,"TYPE":"PHONE","SUBTYPE":null,"LABEL":"WORK","DETAIL":"abcdefg"},{"CONTACT_INFO_ID":60243779461,"TYPE":"PHONE","SUBTYPE":null,"LABEL":"HOME","DETAIL":"222222"},{"CONTACT_INFO_ID":70243779461,"TYPE":"PHONE","SUBTYPE":null,"LABEL":"MOBILE","DETAIL":"333333"},{"CONTACT_INFO_ID":100243779461,"TYPE":"EMAIL","SUBTYPE":null,"LABEL":"WORK","DETAIL":"xxx@qq.com"}],"DATES":[],"TAGS":[{"TAG_NAME":"cool"},{"TAG_NAME":"nice"}],"LINKS":[{"LINK_ID":167974950,"CONTACT_ID":243779461,"OPPORTUNITY_ID":null,"ORGANISATION_ID":117313127,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":"CEO","DETAILS":null}],"CONTACTLINKS":[{"CONTACT_LINK_ID":23272356,"FIRST_CONTACT_ID":243779461,"SECOND_CONTACT_ID":243581683,"RELATIONSHIP_ID":1,"DETAILS":"their
+        relationship key is a car."},{"CONTACT_LINK_ID":23278278,"FIRST_CONTACT_ID":243779461,"SECOND_CONTACT_ID":243581684,"RELATIONSHIP_ID":1,"DETAILS":"nice"}],"CAN_EDIT":true,"CAN_DELETE":true,"SOCIAL_LINKEDIN":null,"SOCIAL_FACEBOOK":null,"SOCIAL_TWITTER":null,"ASSISTANT_NAME":null}'
     http_version: 
-  recorded_at: Sat, 04 Oct 2014 17:38:23 GMT
-recorded_with: VCR 2.9.0
+  recorded_at: Tue, 28 Nov 2017 02:36:16 GMT
+recorded_with: VCR 3.0.3
