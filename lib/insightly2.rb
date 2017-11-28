@@ -1,5 +1,10 @@
 require 'insightly2/version'
 
+begin
+  require 'pry'
+rescue LoadError
+end
+
 module Insightly2
   autoload :Client, 'insightly2/client'
   autoload :DSL, 'insightly2/dsl'
