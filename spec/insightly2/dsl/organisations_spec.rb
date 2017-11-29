@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly2::DSL::Organisations do
-  let(:organisation_id) { 39831139 }
+  let(:organisation_id) { 117309796 }
 
   # GET /v2.1/Organisations/{id}
   describe '#get_organisation' do
@@ -65,9 +65,23 @@ describe Insightly2::DSL::Organisations do
         expect(organisations.first).to be_a(Organisation)
       end
     end
+
+    it 'returns an array of specific organisations' do
+      VCR.use_cassette('get_specific_organisations') do
+        query = { brief: false, skip: 0, top: 10, organisation_name: 'Clampett Oil and Gas Corp' }
+        organisations = Insightly2.client.get_organisations(query)
+        expect(organisations).to be_a(Array)
+        expect(organisations.first).to be_a(Organisation)
+        expect(organisations.first.organisation_name).to include('Clampett Oil and Gas Corp')
+      end
+    end
   end
 
   # POST /v2.1/Organisations
+  #To Do: 2.2 Beta Error
+  #   - Link: when has links[0][link_id], Organisation can create, but links create failed(empty).
+  #   - Relationship: when has ORG_LINK_ID, Organisation created failed with error:
+  #      'originalDbLink must be provided when updating an existing link. Parameter name: originalDbLink'
   describe '#create_organisation' do
     it 'creates and returns organisation' do
       VCR.use_cassette('create_organisation') do

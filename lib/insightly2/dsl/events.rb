@@ -34,9 +34,9 @@ module Insightly2
     # @param [Hash] event The event to update.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Event, nil]
-    def update_event(event: nil)
+    def update_event(event: nil, brief: false)
       raise ArgumentError, "Event cannot be blank" if event.blank?
-      Resources::Event.parse(request(:put, "Events", event))
+      Resources::Event.parse(request(:put, "Events?brief=#{brief}", event))
     end
 
     # DELETE /v2.1/Events/{id}

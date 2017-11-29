@@ -39,4 +39,41 @@ http_interactions:
       string: ''
     http_version: 
   recorded_at: Sat, 04 Oct 2014 22:46:53 GMT
-recorded_with: VCR 2.9.0
+- request:
+    method: delete
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Events/7228197
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Date:
+      - Fri, 24 Nov 2017 09:41:35 GMT
+      Content-Length:
+      - '0'
+      Set-Cookie:
+      - snaptid=sac1prdc01wut04; path=/; HttpOnly; Secure
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 24 Nov 2017 09:41:08 GMT
+recorded_with: VCR 3.0.3

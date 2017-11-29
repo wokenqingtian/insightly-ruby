@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Contacts/Search?last_name=Chen&skip=0&top=10
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Mon, 27 Nov 2017 08:19:07 GMT
+      Content-Length:
+      - '934'
+      Set-Cookie:
+      - snaptid=sac1prdc01wut02; path=/; HttpOnly; Secure
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"CONTACT_ID":243581674,"SALUTATION":null,"FIRST_NAME":"Chris","LAST_NAME":"Chen","BACKGROUND":null,"IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/892327/LNSHL0/19a7dd20-e618-4bce-b96a-332503cb47da.png","DEFAULT_LINKED_ORGANISATION":117309804,"OWNER_USER_ID":1511846,"DATE_CREATED_UTC":"2017-11-23
+        09:35:49","DATE_UPDATED_UTC":"2017-11-23 09:35:55","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"ADDRESSES":[{"ADDRESS_ID":10243581674,"ADDRESS_TYPE":"POSTAL","STREET":"18
+        Barker Street","CITY":"Sydney","STATE":"NSW","POSTCODE":"2000","COUNTRY":"Australia"}],"CONTACTINFOS":[{"CONTACT_INFO_ID":40243581674,"TYPE":"PHONE","SUBTYPE":null,"LABEL":"WORK","DETAIL":"(497)
+        889-1015"},{"CONTACT_INFO_ID":100243581674,"TYPE":"EMAIL","SUBTYPE":null,"LABEL":"WORK","DETAIL":"chrisochen@kinggroup.com"}],"DATES":[],"TAGS":[{"TAG_NAME":"sample_data"}],"LINKS":[{"LINK_ID":167774250,"CONTACT_ID":243581674,"OPPORTUNITY_ID":null,"ORGANISATION_ID":117309804,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":"Employee","DETAILS":null},{"LINK_ID":167774321,"CONTACT_ID":243581674,"OPPORTUNITY_ID":17715340,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":"Decision
+        Maker","DETAILS":null}],"CONTACTLINKS":[],"CAN_EDIT":true,"CAN_DELETE":true,"SOCIAL_LINKEDIN":null,"SOCIAL_FACEBOOK":null,"SOCIAL_TWITTER":null,"ASSISTANT_NAME":null}]'
+    http_version: 
+  recorded_at: Mon, 27 Nov 2017 08:18:38 GMT
+recorded_with: VCR 3.0.3

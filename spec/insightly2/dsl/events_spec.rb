@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe Insightly2::DSL::Events do
-  let(:event_id) { 2402366 }
+  let(:event_id) { 7228029 }
 
-  # GET /v2.1/Events/{id}
+  # GET /v2.2/Events/{id}
   describe '#get_event' do
     it 'returns an event' do
       VCR.use_cassette('get_event') do
@@ -12,7 +12,7 @@ describe Insightly2::DSL::Events do
     end
   end
 
-  # GET /v2.1/Events
+  # GET /v2.2/Events
   describe '#get_events' do
     it 'returns an array of events' do
       VCR.use_cassette('get_events') do
@@ -23,7 +23,7 @@ describe Insightly2::DSL::Events do
     end
   end
 
-  # POST /v2.1/Events
+  # POST /v2.2/Events
   describe '#create_event' do
     it 'creates and returns event' do
       VCR.use_cassette('create_event') do
@@ -33,17 +33,17 @@ describe Insightly2::DSL::Events do
     end
   end
 
-  # PUT /v2.1/Events
+  # PUT /v2.2/Events
   describe '#update_event' do
     it 'updates and returns event' do
       VCR.use_cassette('update_event') do
         event = Insightly2.client.get_event(id: event_id)
-        expect(Insightly2.client.update_event(event: event)).to be_a(Event)
+        expect(Insightly2.client.update_event(event: event, brief: false)).to be_a(Event)
       end
     end
   end
 
-  # DELETE /v2.1/Events/{id}
+  # DELETE /v2.2/Events/{id}
   describe '#delete_event' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_event') do

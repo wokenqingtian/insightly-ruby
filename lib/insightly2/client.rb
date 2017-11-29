@@ -11,7 +11,8 @@ module Insightly2
     include DSL
     include Errors
 
-    URL = 'https://api.insight.ly/v2.1/'
+    # URL = 'https://api.insight.ly/v2.1/'
+    URL = 'https://api.insight.ly/v2.2/'
     REQUESTS = [:get, :post, :put, :delete]
     HEADERS = {'Accept' => 'application/json', 'Content-Type' => 'application/json'}
     LOGGER = Logger.new(STDOUT)
