@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Contacts/243779461/Events
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Tue, 02 Jan 2018 08:22:56 GMT
+      Content-Length:
+      - '485'
+      Set-Cookie:
+      - snaptid=sac1prdc01wut03; path=/; HttpOnly; Secure
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"EVENT_ID":7239057,"TITLE":"have a lunch","LOCATION":"chengdu","DETAILS":"Just
+        tell me.","START_DATE_UTC":"2017-11-27 06:00:00","END_DATE_UTC":"2017-11-27
+        07:00:00","ALL_DAY":false,"PUBLICLY_VISIBLE":true,"REMINDER_DATE_UTC":null,"REMINDER_SENT":false,"EVENTLINKS":[{"EVENT_LINK_ID":6839854,"EVENT_ID":7239057,"CONTACT_ID":243779461,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":null,"LEAD_ID":null}],"OWNER_USER_ID":1511846,"DATE_CREATED_UTC":"2017-11-27
+        05:23:17","DATE_UPDATED_UTC":"2017-11-27 05:23:17","CAN_EDIT":true,"CAN_DELETE":true}]'
+    http_version: 
+  recorded_at: Tue, 02 Jan 2018 08:22:50 GMT
+recorded_with: VCR 3.0.3
