@@ -45,6 +45,17 @@ describe Insightly2::DSL::Contacts do
     end
   end
 
+  # GET /v2.2/Contacts/{c_id}/Events
+  describe '#get_contact_events' do
+    it 'return a contacts events' do
+      VCR.use_cassette('get_contact_events') do
+        events = Insightly2.client.get_contact_events(id: contact_id)
+        expect(events).to be_a(Array)
+        expect(events.first).to be_a(Event)
+      end
+    end
+  end
+
   # GET /v2.1/Contacts/{c_id}/Image
   # describe '#get_contact_image' do
   #   it 'returns a contacts image' do

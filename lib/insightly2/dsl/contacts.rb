@@ -52,6 +52,16 @@ module Insightly2
       Resources::Task.parse(request(:get, "Contacts/#{id}/Tasks"))
     end
 
+    # GET /v2.2/Contacts/{c_id}/Events
+    # Gets a contact's events.
+    # @param [String, Fixnum] id The ID of the contact.
+    # @raise [ArgumentError] If the method arguments are blank.
+    # @return [Array, nil].
+    def get_contact_events(id: nil)
+      raise ArgumentError, "ID cannot be blank" if id.blank?
+      Resources::Event.parse(request(:get, "Contacts/#{id}/Events"))
+    end
+
     # GET /v2.2/Contacts/Search
     # Get or Search a list of contacts.
     def get_contacts(query: {})
