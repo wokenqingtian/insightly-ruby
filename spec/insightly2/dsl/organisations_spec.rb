@@ -102,12 +102,19 @@ describe Insightly2::DSL::Organisations do
   #   end
   # end
 
-  # PUT /v2.1/Organisations
+  # PUT /v2.2/Organisations
   describe '#update_organisation' do
     it 'updates and returns organisation' do
       VCR.use_cassette('update_organisation') do
         organisation = Insightly2.client.get_organisation(id: organisation_id)
         expect(Insightly2.client.update_organisation(organisation: organisation)).to be_a(Organisation)
+      end
+    end
+
+    it 'partial updates and returns organisation' do
+      VCR.use_cassette('partial_update_organisation') do
+        organisation = Insightly2.client.get_organisation(id: organisation_id)
+        expect(Insightly2.client.update_organisation(organisation: organisation, brief: true)).to be_a(Organisation)
       end
     end
   end

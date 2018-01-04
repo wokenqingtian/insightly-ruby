@@ -79,14 +79,15 @@ module Insightly2
       request(:post, "Organisations/#{id}/Image/#{filename}")
     end
 
-    # PUT /v2.1/Organisations
+    # PUT /v2.2/Organisations
     # Update an organisation.
     # @param [Hash] organisation The organisation to update.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Organisation, nil].
-    def update_organisation(organisation: nil)
+    def update_organisation(organisation: nil, brief: false)
       raise ArgumentError, "Organisation cannot be blank" if organisation.blank?
-      Resources::Organisation.parse(request(:put, "Organisations", organisation))
+      url = Utils::UrlHelper.build_url(path: "Organisations", params: { brief: brief })
+      Resources::Organisation.parse(request(:put, url, organisation))
     end
 
     # PUT /v2.1/Organisations/{c_id}/Image/{filename}

@@ -31,27 +31,27 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Thu, 04 Jan 2018 06:49:22 GMT
+      - Thu, 04 Jan 2018 06:49:28 GMT
       Content-Length:
-      - '718'
+      - '726'
       Set-Cookie:
-      - snaptid=sac1prdc01wut02; path=/; HttpOnly; Secure
+      - snaptid=sac1prdc01wut01; path=/; HttpOnly; Secure
     body:
       encoding: ASCII-8BIT
       string: '{"ORGANISATION_ID":117309796,"ORGANISATION_NAME":"Clampett Oil and
         Gas Corp.","BACKGROUND":null,"IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/892327/LNSHL0/446c9cd3-ecc2-4e35-b512-8711b17a6e25.png","OWNER_USER_ID":1511846,"DATE_CREATED_UTC":"2017-11-23
-        09:35:48","DATE_UPDATED_UTC":"2017-11-28 07:48:52","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"ADDRESSES":null,"CONTACTINFOS":[],"DATES":[],"TAGS":[{"TAG_NAME":"sample
+        09:35:48","DATE_UPDATED_UTC":"2018-01-04 06:49:24","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"ADDRESSES":null,"CONTACTINFOS":[],"DATES":[],"TAGS":[{"TAG_NAME":"sample
         data"}],"LINKS":[{"LINK_ID":168097071,"CONTACT_ID":243581677,"OPPORTUNITY_ID":null,"ORGANISATION_ID":117309796,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null}],"ORGANISATIONLINKS":[{"ORG_LINK_ID":1446473,"FIRST_ORGANISATION_ID":117309797,"SECOND_ORGANISATION_ID":117309796,"RELATIONSHIP_ID":7,"DETAILS":null}],"CAN_EDIT":true,"CAN_DELETE":true,"SOCIAL_LINKEDIN":null,"SOCIAL_FACEBOOK":null,"SOCIAL_TWITTER":null}'
     http_version: 
-  recorded_at: Thu, 04 Jan 2018 06:49:15 GMT
+  recorded_at: Thu, 04 Jan 2018 06:49:20 GMT
 - request:
     method: put
-    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Organisations
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.2/Organisations?brief=true
     body:
       encoding: UTF-8
       string: '{"ORGANISATION_ID":117309796,"ORGANISATION_NAME":"Clampett Oil and
         Gas Corp.","BACKGROUND":null,"IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/892327/LNSHL0/446c9cd3-ecc2-4e35-b512-8711b17a6e25.png","OWNER_USER_ID":1511846,"DATE_CREATED_UTC":"2017-11-23
-        09:35:48","DATE_UPDATED_UTC":"2017-11-28 07:48:52","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"ADDRESSES":null,"CONTACTINFOS":[],"DATES":[],"TAGS":[{"TAG_NAME":"sample
+        09:35:48","DATE_UPDATED_UTC":"2018-01-04 06:49:24","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"ADDRESSES":null,"CONTACTINFOS":[],"DATES":[],"TAGS":[{"TAG_NAME":"sample
         data"}],"LINKS":[{"LINK_ID":168097071,"CONTACT_ID":243581677,"OPPORTUNITY_ID":null,"ORGANISATION_ID":117309796,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null}],"ORGANISATIONLINKS":[{"ORG_LINK_ID":1446473,"FIRST_ORGANISATION_ID":117309797,"SECOND_ORGANISATION_ID":117309796,"RELATIONSHIP_ID":7,"DETAILS":null}],"CAN_EDIT":true,"CAN_DELETE":true,"SOCIAL_LINKEDIN":null,"SOCIAL_FACEBOOK":null,"SOCIAL_TWITTER":null}'
     headers:
       User-Agent:
@@ -78,17 +78,17 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Thu, 04 Jan 2018 06:49:24 GMT
+      - Thu, 04 Jan 2018 06:49:29 GMT
       Content-Length:
       - '726'
       Set-Cookie:
-      - snaptid=sac1prdc01wut04; path=/; HttpOnly; Secure
+      - snaptid=sac1prdc01wut01; path=/; HttpOnly; Secure
     body:
       encoding: ASCII-8BIT
       string: '{"ORGANISATION_ID":117309796,"ORGANISATION_NAME":"Clampett Oil and
         Gas Corp.","BACKGROUND":null,"IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/892327/LNSHL0/446c9cd3-ecc2-4e35-b512-8711b17a6e25.png","OWNER_USER_ID":1511846,"DATE_CREATED_UTC":"2017-11-23
-        09:35:48","DATE_UPDATED_UTC":"2018-01-04 06:49:24","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"ADDRESSES":null,"CONTACTINFOS":[],"DATES":[],"TAGS":[{"TAG_NAME":"sample
+        09:35:48","DATE_UPDATED_UTC":"2018-01-04 06:49:29","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"ADDRESSES":null,"CONTACTINFOS":[],"DATES":[],"TAGS":[{"TAG_NAME":"sample
         data"}],"LINKS":[{"LINK_ID":168097071,"CONTACT_ID":243581677,"OPPORTUNITY_ID":null,"ORGANISATION_ID":117309796,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null}],"ORGANISATIONLINKS":[{"ORG_LINK_ID":1446473,"FIRST_ORGANISATION_ID":117309797,"SECOND_ORGANISATION_ID":117309796,"RELATIONSHIP_ID":7,"DETAILS":null}],"CAN_EDIT":true,"CAN_DELETE":true,"SOCIAL_LINKEDIN":null,"SOCIAL_FACEBOOK":null,"SOCIAL_TWITTER":null}'
     http_version: 
-  recorded_at: Thu, 04 Jan 2018 06:49:17 GMT
+  recorded_at: Thu, 04 Jan 2018 06:49:22 GMT
 recorded_with: VCR 3.0.3
