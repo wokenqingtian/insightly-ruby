@@ -2,7 +2,7 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::Organisations
-    # GET /v2.1/Organisations/{id}
+    # GET /v2.2/Organisations/{id}
     # Get an organisation.
     # @param [String, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.

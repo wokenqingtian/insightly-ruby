@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Insightly2::DSL::Organisations do
   let(:organisation_id) { 117309796 }
 
-  # GET /v2.1/Organisations/{id}
+  # GET /v2.2/Organisations/{id}
   describe '#get_organisation' do
     it 'returns an organisation' do
       VCR.use_cassette('get_organisation') do
