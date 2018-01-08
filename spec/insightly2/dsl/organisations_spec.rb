@@ -56,7 +56,7 @@ describe Insightly2::DSL::Organisations do
     end
   end
 
-  # GET /v2.1/Organisations?ids={ids}&domain={domain}&tag={tag}
+  # GET /v2.2/Organisations?ids={ids}&domain={domain}&tag={tag}
   describe '#get_organisations' do
     it 'returns an array of organisations' do
       VCR.use_cassette('get_organisations') do

@@ -53,7 +53,7 @@ module Insightly2
 
     # GET /v2.2/Organisations/Search
     def get_organisations(query={})
-      url = Utils::UrlHelper.build_url(path: "Organisations", params: query)
+      url = Utils::UrlHelper.build_url(path: "Organisations/Search", params: query)
       Resources::Organisation.parse(request(:get, url))
     end
 
