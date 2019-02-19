@@ -90,6 +90,14 @@ module Insightly2
       Resources::Organisation.parse(request(:put, url, organisation))
     end
 
+    # PUT /v2.2/Organisations/{c_id}/Addresses
+    # Updates a organisations's address
+    def update_organisation_address(organisation_id: nil, address: nil)
+      raise ArgumentError, "Organisation id cannot be blank" if organisation_id.blank?
+      raise ArgumentError, "Organisation addresses cannot be blank" if address.blank?
+      Resources::Organisation.parse(request(:put, "Organisations/#{organisation_id}/Addresses", address))
+    end
+
     # PUT /v2.1/Organisations/{c_id}/Image/{filename}
     # Update an organisation's image.
     # @param [String, Fixnum] id An organisation's ID.
